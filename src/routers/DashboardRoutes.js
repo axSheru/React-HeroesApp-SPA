@@ -1,6 +1,6 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { DCScreen } from '../components/dc/DCScreen';
-import { HeroScreen } from '../components/hero/HeroScreen';
+import { HeroScreen } from '../components/heroes/HeroScreen';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { SearchScreen } from '../components/search/SearchScreen';
 import { Navbar } from "../ui/Navbar";
@@ -15,7 +15,7 @@ export const DashboardRoutes = () => {
                 <Route path="dc" element={<DCScreen />} />
 
                 <Route path="search" element={<SearchScreen />} />
-                <Route path="hero" element={<HeroScreen />} />
+                <Route path="hero/:heroId" element={<HeroScreen />} />
 
                 <Route path="/" element={<MarvelScreen />} />
             </Routes>

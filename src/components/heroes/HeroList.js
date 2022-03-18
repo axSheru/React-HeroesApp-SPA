@@ -22,5 +22,5 @@ export const HeroList = ({ publisher }) => {
 };
 
 HeroList.propTypes = {
-    publisher: PropTypes.string.isRequired.oneOf(['Marvel Comics', 'DC Comics']),
+    publisher: PropTypes.string.isRequired.oneOf(['Marvel Comics', 'DC Comics3']),
 };

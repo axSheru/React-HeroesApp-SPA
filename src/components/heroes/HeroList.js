@@ -1,0 +1,26 @@
+import PropTypes from 'prop-types';
+import { getHeroesByPublisher } from "../../selectors/getHeroesByPublisher";
+
+
+export const HeroList = ({ publisher }) => {
+
+    const heroes = getHeroesByPublisher( publisher );
+
+    return (
+        <>
+            <ul>
+                {
+                    heroes.map( hero => (
+                        <li key={ hero.id }>
+                            { hero.superhero }
+                        </li>
+                    ))
+                }
+            </ul>
+        </>
+    );
+};
+
+HeroList.propTypes = {
+    publisher: PropTypes.string.isRequired.oneOf(['Marvel Comics', 'DC Comics']),
+};

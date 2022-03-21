@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
-import { SearchScreen } from "../../components/search/SearchScreen";
+import { SearchScreen } from "../../../components/search/SearchScreen";
 
 // Creamos un mock de use navigate. Debe de llevar la palabra mock para poder ser accesado.
 const mockNavigate = jest.fn();

@@ -1,6 +1,9 @@
 import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { heroImages } from "../../helpers/heroImages";
 import { getHeroById } from "../../selectors/getHeroById";
+
+// import batman from '../../assets/dc-batman.jpg';// Forma estática.
 
 export const HeroScreen = () => {
 	
@@ -31,7 +34,13 @@ export const HeroScreen = () => {
 	return (
 		<div className="row mt-5">
 			<div className="col-4">
-				<img src={ imagePath } alt={ superhero } className="img-thumbnail  animate__animated animate__fadeInLeft" />
+				<img
+					// src={ imagePath }// Desde public/assets
+					// src={ batman }// Forma estática import.
+					src={ heroImages( `./${ id }.jpg` ) }
+					alt={ superhero }
+					className="img-thumbnail  animate__animated animate__fadeInLeft"
+				/>
 			</div>
 			<div className="col-8">
 				<h3>{ superhero }</h3>
